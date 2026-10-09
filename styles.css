@@ -1,0 +1,138 @@
+/* Custom Styles for Hameed & Sons Bakery Website */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bakery-dark: #291507;
+  --bakery-chocolate: #451a03;
+  --bakery-amber: #78350f;
+  --bakery-gold: #d97706;
+  --bakery-accent: #f59e0b;
+  --bakery-cream: #fffbeb;
+  --bakery-warm-white: #fef3c7;
+  --bakery-slate: #1c1917;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #292524;
+  background-color: #fffdfa;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fef3c7;
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #78350f;
+}
+
+/* Navigation Blur Effect */
+.nav-bakery {
+  background: rgba(41, 21, 7, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-bakery.scrolled {
+  background: rgba(28, 15, 5, 0.98);
+  box-shadow: 0 10px 30px -10px rgba(69, 26, 3, 0.4);
+}
+
+/* Hero Background Gradient Overlay */
+.hero-bakery-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(41, 21, 7, 0.88) 0%,
+    rgba(69, 26, 3, 0.80) 50%,
+    rgba(28, 15, 5, 0.94) 100%
+  );
+}
+
+/* Product Card Styling */
+.product-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px -10px rgba(217, 119, 6, 0.25);
+}
+
+.product-card .card-img {
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .card-img {
+  transform: scale(1.08);
+}
+
+/* Gold Button Glow */
+.btn-gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Modal Styling */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.9) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-backdrop.active .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Category Filter Tabs */
+.bakery-tab {
+  transition: all 0.3s ease;
+}
+
+.bakery-tab.active {
+  background-color: #d97706;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+}
+
+/* Mobile Nav Drawer */
+.mobile-drawer {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}

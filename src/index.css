@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased font-sans selection:bg-cyan-500 selection:text-white;
+  }
+}
+
+/* Printable Bill Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-bill, #printable-bill * {
+    visibility: visible;
+  }
+  #printable-bill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
